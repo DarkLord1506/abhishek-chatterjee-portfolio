@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "check": "node scripts/check.mjs",
+    "render-concepts": "node scripts/render-concepts.mjs",
     "visual-check": "node scripts/visual-check.mjs"
   }
 }

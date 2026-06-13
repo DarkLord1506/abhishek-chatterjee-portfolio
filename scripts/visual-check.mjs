@@ -63,7 +63,9 @@ async function inspectPage(name, viewport) {
       sectionCount: visibleSections.length,
       resumeLink: resumeLink?.getAttribute("href") || null,
       navToggleVisible:
-        getComputedStyle(document.querySelector("[data-nav-toggle]")).display !==
+        getComputedStyle(
+          document.querySelector("[data-nav-toggle], [data-menu-toggle]"),
+        ).display !==
         "none",
     };
   });

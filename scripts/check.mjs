@@ -8,6 +8,9 @@ const requiredFiles = [
   "script.js",
   "assets/favicon.svg",
   "assets/Abhishek-Chatterjee-Resume.pdf",
+  "legacy.html",
+  "legacy-styles.css",
+  "legacy-script.js",
   "sitemap.xml",
   "vercel.json",
 ];
@@ -23,6 +26,8 @@ const checks = [
   [html.includes('id="contact"'), "Contact section is present"],
   [html.includes("Abhishek-Chatterjee-Resume.pdf"), "Resume link is present"],
   [html.includes("linkedin.com/in/abhishek-chatterjee-8b37b9206"), "LinkedIn link is present"],
+  [html.includes("github.com/DarkLord1506"), "GitHub link is present"],
+  [html.includes('id="projects"'), "Personal projects section is present"],
   [html.includes("application/ld+json"), "Structured data is present"],
   [css.includes("@media (prefers-reduced-motion: reduce)"), "Reduced-motion styles are present"],
   [js.includes("IntersectionObserver"), "Progressive reveal behavior is present"],

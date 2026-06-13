@@ -1,28 +1,36 @@
-const menu = document.querySelector("[data-menu]");
-const menuToggle = document.querySelector("[data-menu-toggle]");
-const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
+const header = document.querySelector("[data-header]");
+const nav = document.querySelector("[data-nav]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 const sections = [...document.querySelectorAll("main section[id]")];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
-const closeMenu = () => {
-  menu.classList.remove("open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  document.body.classList.remove("menu-open");
+const closeNavigation = () => {
+  nav.classList.remove("open");
+  navToggle.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("nav-open");
 };
 
-menuToggle.addEventListener("click", () => {
-  const open = menu.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-  document.body.classList.toggle("menu-open", open);
+navToggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  document.body.classList.toggle("nav-open", isOpen);
 });
 
-navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+navLinks.forEach((link) => link.addEventListener("click", closeNavigation));
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 820) closeMenu();
+  if (window.innerWidth > 820) closeNavigation();
 });
+
+const syncHeader = () => {
+  header.classList.toggle("scrolled", window.scrollY > 18);
+};
+
+syncHeader();
+window.addEventListener("scroll", syncHeader, { passive: true });
 
 if (reduceMotion || !("IntersectionObserver" in window)) {
   document.querySelectorAll(".reveal").forEach((element) => {
@@ -61,7 +69,7 @@ const sectionObserver = new IntersectionObserver(
     });
   },
   {
-    rootMargin: "-18% 0px -68% 0px",
+    rootMargin: "-20% 0px -65% 0px",
     threshold: [0, 0.2, 0.5],
   },
 );

@@ -1,0 +1,10 @@
+{
+  "name": "abhishek-chatterjee-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "visual-check": "node scripts/visual-check.mjs"
+  }
+}

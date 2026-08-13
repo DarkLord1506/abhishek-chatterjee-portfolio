@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /legacy.html
 
-Sitemap: https://abhishek-chatterjee-portfolio.vercel.app/sitemap.xml
+Sitemap: https://portfolio-abhishek.nexus-library.in/sitemap.xml

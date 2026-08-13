@@ -6,7 +6,8 @@
   --muted: #64635d;
   --rule: #a7a398;
   --rule-dark: #77756e;
-  --red: #c8462d;
+  --red: #ab3620;
+  --focus: #1a4fd6;
   --night: #1e211d;
   --night-muted: #a6aaa1;
   --serif: Georgia, "Times New Roman", serif;
@@ -65,6 +66,18 @@ button {
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+/* Visible, consistent keyboard focus across every interactive element. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.night :focus-visible,
+.contact :focus-visible {
+  outline-color: #8fb4ff;
 }
 
 .site-header {

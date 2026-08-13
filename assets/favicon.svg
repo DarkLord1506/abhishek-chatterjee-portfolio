@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#0b1916"/>
-  <rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="#7be6c8" stroke-opacity=".55"/>
-  <path d="M17 43 27.5 20h6L44 43h-6.2l-2-5H25.5l-2.1 5H17Zm10.5-10h6.3l-3.1-7.8-3.2 7.8Z" fill="#7be6c8"/>
-  <path d="M44.5 23.5a12 12 0 0 0-6.6-2.2c-2.1 0-3.6.5-4.6 1.4l-2.4-4.1c1.9-1.4 4.4-2.1 7.5-2.1 2.9 0 5.5.7 7.9 2.1l-1.8 4.9Z" fill="#edf8f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Abhishek Chatterjee">
+  <rect width="64" height="64" rx="14" fill="#191b18"/>
+  <path d="M15.4 47 27.9 15h8.2L48.6 47h-8L38 40H26l-2.6 7h-8Zm12.9-13.6h7.4L32 22.6l-3.7 10.8Z" fill="#f2efe8"/>
+  <rect x="19" y="52" width="26" height="3.4" rx="1.7" fill="#ab3620"/>
 </svg>

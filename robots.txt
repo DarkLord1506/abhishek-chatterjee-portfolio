@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /legacy.html
 
 Sitemap: https://abhishek-chatterjee-portfolio.vercel.app/sitemap.xml

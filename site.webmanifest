@@ -1,15 +1,37 @@
 {
-  "name": "Abhishek Chatterjee | Portfolio",
-  "short_name": "AC Portfolio",
+  "name": "Abhishek Chatterjee | Senior Software Engineer",
+  "short_name": "A. Chatterjee",
+  "description": "Portfolio of Abhishek Chatterjee - low-latency market-data systems, distributed Java services, and cloud platforms.",
+  "lang": "en",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#07110f",
-  "theme_color": "#07110f",
+  "background_color": "#f2efe8",
+  "theme_color": "#f2efe8",
   "icons": [
     {
       "src": "assets/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

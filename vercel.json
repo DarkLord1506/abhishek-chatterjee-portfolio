@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -14,18 +15,78 @@
         },
         {
           "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=()"
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests"
         }
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/:file(.*\\.(?:svg|png|jpg|jpeg|webp|ico|woff2))",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
         }
       ]
+    },
+    {
+      "source": "/assets/Abhishek-Chatterjee-Resume.pdf",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline; filename=\"Abhishek-Chatterjee-Resume.pdf\""
+        }
+      ]
+    },
+    {
+      "source": "/legacy.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/resume",
+      "destination": "/assets/Abhishek-Chatterjee-Resume.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/cv",
+      "destination": "/assets/Abhishek-Chatterjee-Resume.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/in/abhishek-chatterjee-8b37b9206",
+      "permanent": false
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/DarkLord1506",
+      "permanent": false
     }
   ]
 }
